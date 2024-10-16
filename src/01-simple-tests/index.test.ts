@@ -1,32 +1,65 @@
-// Uncomment the code below and write your tests
-// import { simpleCalculator, Action } from './index';
+import { simpleCalculator } from './index';
+import { simpleTestCases } from '../testCases';
 
 describe('simpleCalculator tests', () => {
   test('should add two numbers', () => {
-    // Write your test here
+    const { shouldAddTwoNumbers } = simpleTestCases;
+
+    shouldAddTwoNumbers &&
+      expect(simpleCalculator(shouldAddTwoNumbers)).toBe(
+        shouldAddTwoNumbers.expected,
+      );
   });
 
   test('should subtract two numbers', () => {
-    // Write your test here
+    const { shouldSubtractTwoNumbers } = simpleTestCases;
+
+    shouldSubtractTwoNumbers &&
+      expect(simpleCalculator(shouldSubtractTwoNumbers)).toBe(
+        shouldSubtractTwoNumbers.expected,
+      );
   });
 
   test('should multiply two numbers', () => {
-    // Write your test here
+    const { shouldMultiplyTwoNumbers } = simpleTestCases;
+
+    shouldMultiplyTwoNumbers &&
+      expect(simpleCalculator(shouldMultiplyTwoNumbers)).toBe(
+        shouldMultiplyTwoNumbers.expected,
+      );
   });
 
   test('should divide two numbers', () => {
-    // Write your test here
+    const { shouldDivideTwoNumbers } = simpleTestCases;
+    shouldDivideTwoNumbers &&
+      expect(simpleCalculator(shouldDivideTwoNumbers)).toBe(
+        shouldDivideTwoNumbers.expected,
+      );
   });
 
   test('should exponentiate two numbers', () => {
-    // Write your test here
+    const { shouldExponentiateTwoNumbers } = simpleTestCases;
+    shouldExponentiateTwoNumbers &&
+      expect(simpleCalculator(shouldExponentiateTwoNumbers)).toBe(
+        shouldExponentiateTwoNumbers.expected,
+      );
   });
 
   test('should return null for invalid action', () => {
-    // Write your test here
+    const { shouldReturnNullForInvalidAction } = simpleTestCases;
+
+    shouldReturnNullForInvalidAction &&
+      expect(simpleCalculator(shouldReturnNullForInvalidAction)).toBe(
+        shouldReturnNullForInvalidAction.expected,
+      );
   });
 
   test('should return null for invalid arguments', () => {
-    // Write your test here
+    const { shouldReturnNullForInvalidArguments } = simpleTestCases;
+
+    shouldReturnNullForInvalidArguments &&
+      expect(simpleCalculator(shouldReturnNullForInvalidArguments)).toBe(
+        shouldReturnNullForInvalidArguments.expected,
+      );
   });
 });
